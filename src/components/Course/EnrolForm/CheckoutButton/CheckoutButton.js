@@ -3,7 +3,9 @@ import classes from './CheckoutButton.module.css';
 
 const checkoutButton = (props) => {
     return (
-        <button className={classes.CheckoutButton}>{props.name}</button>
+        <button 
+            onClick={props.clicked}
+            className={classes.CheckoutButton}>{props.name}</button>
     )
 }
 

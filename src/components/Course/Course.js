@@ -2,21 +2,35 @@ import React, { Component } from 'react';
 import classes from './Course.module.css';
 import CourseImage from './CourseAssets/CourseImage/CourseImage';
 import Modal from '../UI/Modal/Modal';
-import Backdrop from '../UI/Backdrop/Backdrop';
 import EnrolForm from './EnrolForm/EnrolForm';
 import CallToActionButton from './CallToActionButton/CallToActionButton';
 
 class Course extends Component {
     state = {
-        showEnrolForm: true
+        showEnrolForm: false
+    }
+
+    closeEnrolFormHandler = () => {
+        alert("closing")
+        this.setState({showEnrolForm: false});
+    }
+
+    openEnrolFormHandler = () => {
+        this.setState({showEnrolForm: true});
+    }
+
+    checkoutHandler = () => {
+        alert("Checkout...")
     }
 
     render() {
         return (
             <div className={classes.Course}>
                 <Modal
-                    show={this.state.showEnrolForm}>
-                    <EnrolForm />
+                    show={this.state.showEnrolForm}
+                    closed={this.closeEnrolFormHandler}>
+                    <EnrolForm 
+                        clicked={this.checkoutHandler}/>
                 </Modal>
                 <div>
                     <CourseImage />
@@ -25,7 +39,9 @@ class Course extends Component {
                     <h1>Nas Creator Course - NC2005B</h1>
                     <p><strong>$2,700.00</strong></p>
                     <p><span style={{color: 'red'}}>10</span> spots left in this course</p>
-                    <CallToActionButton name="Enroll"/>                    
+                    <CallToActionButton 
+                        clicked={this.openEnrolFormHandler}
+                        name="Enroll"/>                    
                 </div>
 
                 <p>

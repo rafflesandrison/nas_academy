@@ -3,7 +3,9 @@ import classes from './CallToActionButton.module.css';
 
 const callToActionButton = (props) => {
     return (
-        <button className={classes.CallToActionButton}>{props.name}</button>
+        <button 
+            onClick={props.clicked}
+            className={classes.CallToActionButton}>{props.name}</button>
     )
 }
 

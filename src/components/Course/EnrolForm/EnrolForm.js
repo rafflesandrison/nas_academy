@@ -6,7 +6,7 @@ import SelectOption from '../../UI/SelectOption/SelectOption';
 import Checkbox from '../../UI/Checkbox/Checkbox';
 import CheckoutButton from './CheckoutButton/CheckoutButton';
 
-const enrolForm = () => {
+const enrolForm = (props) => {
     return (
         <form className={classes.EnrolForm}>
             <h3>Contact Information</h3>
@@ -47,7 +47,9 @@ const enrolForm = () => {
                 name="phone"
                 placeholder="Phone"/>
             <div style={{textAlign: 'center'}}>
-                <CheckoutButton name="Checkout"/>
+                <CheckoutButton 
+                    clicked={props.clicked}
+                    name="Checkout"/>
             </div>
         </form>
     )
