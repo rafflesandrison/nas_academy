@@ -1,11 +1,14 @@
 import React from 'react';
+import classes from './EnrolForm.module.css';
+
 import Input from '../../UI/Input/Input';
 import SelectOption from '../../UI/SelectOption/SelectOption';
 import Checkbox from '../../UI/Checkbox/Checkbox';
+import CheckoutButton from './CheckoutButton/CheckoutButton';
 
 const enrolForm = () => {
     return (
-        <form>
+        <form className={classes.EnrolForm}>
             <h3>Contact Information</h3>
             <Input 
                 type="email"
@@ -34,7 +37,6 @@ const enrolForm = () => {
                 type="text"
                 name="city"
                 placeholder="City"/>
-            <p>--- COUNTRY / REGION ---</p>
             <SelectOption />
             <Input 
                 type="text"
@@ -44,8 +46,9 @@ const enrolForm = () => {
                 type="text"
                 name="phone"
                 placeholder="Phone"/>
-
-            
+            <div style={{textAlign: 'center'}}>
+                <CheckoutButton name="Checkout"/>
+            </div>
         </form>
     )
 }
