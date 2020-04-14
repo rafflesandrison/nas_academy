@@ -1,0 +1,10 @@
+/* For Mobile */
+.CourseImage {
+    width: 100%;
+    text-align: center;
+}
+
+.CourseImage img {
+    max-width: 330px;
+    max-height: 330px;
+}

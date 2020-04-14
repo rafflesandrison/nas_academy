@@ -1,0 +1,13 @@
+/* For Mobile */
+.Header {
+    width: 100%;
+    background-color: #393939;
+    padding: 16px;
+}
+
+/* For Laptop */
+@media (min-width: 700px) {
+    .Header {
+        background-color: green;
+    }
+} 
