@@ -1,6 +1,7 @@
 import React from 'react';
 import Input from '../../UI/Input/Input';
 import SelectOption from '../../UI/SelectOption/SelectOption';
+import Checkbox from '../../UI/Checkbox/Checkbox';
 
 const enrolForm = () => {
     return (
@@ -10,6 +11,7 @@ const enrolForm = () => {
                 type="email"
                 name="email"
                 placeholder="Email"/>
+            <Checkbox label="Keep me up to date on news and exclusive offers"/>
 
             <h3>Billing address</h3>
             <Input 
