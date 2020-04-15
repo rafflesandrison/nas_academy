@@ -11,40 +11,65 @@ const enrolForm = (props) => {
         <form className={classes.EnrolForm}>
             <h3>Contact Information</h3>
             <Input 
+                required={true}
+                changed={props.changed}
                 type="email"
                 name="email"
+                value={props.data.email}
                 placeholder="Email"/>
-            <Checkbox label="Keep me up to date on news and exclusive offers"/>
+            <Checkbox 
+                checked={props.data.wantNewsLetter}
+                clicked={props.checkboxHandler}
+                label="Keep me up to date on news and exclusive offers"/>
 
             <h3>Billing address</h3>
-            <Input 
+            <Input
+                required={true}
+                changed={props.changed}
                 type="text"
                 name="firstName"
+                value={props.data.firstName}
                 placeholder="First Name"/>
-            <Input 
+            <Input
+                required={true}
+                changed={props.changed}
                 type="text"
                 name="lastName"
+                value={props.data.lastName}
                 placeholder="Last Name"/>
             <Input 
+                required={true}
+                changed={props.changed}
                 type="text"
                 name="address"
+                value={props.data.address}
                 placeholder="Address"/>
             <Input 
+                changed={props.changed}
                 type="text"
                 name="addressAdditional"
+                value={props.data.addressAdditional}
                 placeholder="Apartment, suite, etc. (optional)"/>
             <Input 
+                changed={props.changed}
                 type="text"
                 name="city"
+                value={props.data.city}
                 placeholder="City"/>
             <SelectOption />
             <Input 
-                type="text"
+                required={true}
+                changed={props.changed}
+                type="number"
                 name="postalCode"
+                value={props.data.postalCode}
                 placeholder="Postal Code"/>
             <Input 
-                type="text"
+                required={true}
+                changed={props.changed}
+                type="number"
                 name="phone"
+                value={props.data.phone}
                 placeholder="Phone"/>
             <div style={{textAlign: 'center'}}>
                 <CheckoutButton 

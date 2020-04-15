@@ -7,6 +7,18 @@ import CourseDetail from './CourseDetail/CourseDetail';
 
 class Course extends Component {
     state = {
+        enrolData: {
+            email: null,
+            wantNewsLetter: false,
+            firstName: null,
+            lastName: null,
+            address: null,
+            addressAdditional: null,
+            city: null,
+            country: null,
+            postalCode: null,
+            phone: null,
+        },
         showEnrolForm: false
     }
 
@@ -18,7 +30,34 @@ class Course extends Component {
         this.setState({showEnrolForm: true});
     }
 
+    enrolFormIsValid = () => {
+        Object.keys(this.state.enrolData).map(key => {
+            
+        })
+    }
+
+    checkboxHandler = () => {
+        let updatedEnrolData = {...this.state.enrolData};
+        
+        this.setState(prevState => {
+            updatedEnrolData['wantNewsLetter'] = !prevState.enrolData.wantNewsLetter;
+            return {
+                enrolData: updatedEnrolData
+            }
+        })
+    }
+
+    onInputChangeHandler = (e) => {
+        let oldEnrolData = {...this.state.enrolData};
+        let newValue = e.target.value;
+        oldEnrolData[e.target.name] = newValue.toString();
+        this.setState({enrolData: oldEnrolData});
+        console.log("event.target", e.target);
+        console.log("prevstate", this.state.enrolData)
+    }
+
     checkoutHandler = () => {
+        
         alert("Checkout...")
     }
 
@@ -29,6 +68,9 @@ class Course extends Component {
                     show={this.state.showEnrolForm}
                     closed={this.closeEnrolFormHandler}>
                     <EnrolForm 
+                        data={this.state.enrolData}
+                        checkboxHandler={this.checkboxHandler}
+                        changed={this.onInputChangeHandler}
                         clicked={this.checkoutHandler}/>
                 </Modal>
                 <CourseImage />

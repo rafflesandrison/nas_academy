@@ -6,10 +6,13 @@ const input = (props) => {
     return (
         <Aux>
             <input 
+                onChange={props.changed}
                 className={classes.Input}
                 type={props.type} 
-                name={props.name} 
-                placeholder={props.placeholder}/>
+                name={props.name}
+                value={props.value}
+                placeholder={props.placeholder}
+                required={props.required}/>
         </Aux>
     )
 }
