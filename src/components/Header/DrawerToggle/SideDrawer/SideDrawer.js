@@ -8,8 +8,10 @@ import Logo from '../../Logo/Logo';
 const sideDrawer = (props) => {
     return (
         <Aux>
-            <Backdrop show={true}/>
-                <nav className={classes.SideDrawer}>
+            <Backdrop 
+                clicked={props.closed}
+                show={props.show}/>
+            <nav className={classes.SideDrawer} hidden={!props.show}>
                 <NavigationItems />
             </nav>
         </Aux>
