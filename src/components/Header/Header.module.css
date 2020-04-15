@@ -1,13 +1,19 @@
 /* For Mobile */
 .Header {
+    height: 56px;
     width: 100%;
     background-color: #393939;
     padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Logo {
+    height: 100%;
 }
 
 /* For Laptop */
 @media (min-width: 700px) {
     .Header {
-        background-color: green;
     }
 } 
