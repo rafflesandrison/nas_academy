@@ -1,11 +1,21 @@
-.CourseDetail {
-
+.CourseDetailBody {
+    width: 80%;
+    margin: auto;
 }
 
 .Learn {
     background-color: white;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .Note {
     font-size: 12px;
+}
+
+@media (min-width: 700px) {
+    .CourseDetailBody {
+        width: 60%;
+    }
 }

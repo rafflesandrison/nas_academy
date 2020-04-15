@@ -5,9 +5,10 @@ import DrawerToggle from './DrawerToggle/DrawerToggle';
 
 const header = (props) => (
     <div className={classes.Header}>
-        <DrawerToggle clicked={props.openSideDrawer} />
+        <DrawerToggle 
+            clicked={props.openSideDrawer} />
         <div className={classes.Logo}><Logo /></div>
-        <div>Cart</div>
+        <div>dummy</div>
     </div>
 )
 

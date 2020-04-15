@@ -1,9 +1,9 @@
 /* For Mobile */
 .Header {
+    margin: 0;
     height: 56px;
-    width: 100%;
     background-color: #393939;
-    padding: 16px;
+    padding: 16px 24px;
     display: flex;
     justify-content: space-between;
     color: #393939;
@@ -16,5 +16,15 @@
 /* For Laptop */
 @media (min-width: 700px) {
     .Header {
+    }
+
+    .DrawerToggle {
+        display: none;
+    }
+
+    .Logo {
+        position: relative;
+        left: 0;
+        top: 0;
     }
 } 

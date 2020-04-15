@@ -3,7 +3,7 @@ import classes from './NavigationItems.module.css';
 
 const navigationItems = () => {
     return (
-        <ul className={classes.NavigationItems}>
+        <ul className={classes.NavigationItems} style={{listStyle: 'none'}}>
             <li><a href="/">Home</a></li>
             <li><a href="/">Courses</a></li>
             <li><a href="/">Student Projects</a></li>

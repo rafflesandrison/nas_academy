@@ -1,5 +1,6 @@
 .NavigationItems {
-
+    margin: 0;
+    padding: 0;
 }
 
 .NavigationItems ul {
@@ -9,6 +10,7 @@
     width: 100%;
     background-color: #f1f1f1;
     z-index: 90;
+    list-style: none;
 }
 
 .NavigationItems li a {
