@@ -28,3 +28,13 @@
     margin: 0;
     padding: 0;
 }
+
+@media (min-width: 700px) {
+    .Footer {
+        padding: 0 20%;
+    }
+
+    .OtherInfo {
+        margin-right: 300px;
+    }
+}

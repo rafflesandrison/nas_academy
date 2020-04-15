@@ -16,15 +16,6 @@
 /* For Laptop */
 @media (min-width: 700px) {
     .Header {
-    }
-
-    .DrawerToggle {
-        display: none;
-    }
-
-    .Logo {
-        position: relative;
-        left: 0;
-        top: 0;
+        width: 100%;
     }
 } 
