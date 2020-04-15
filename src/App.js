@@ -3,6 +3,7 @@ import Aux from './hoc/Auxiliary';
 import Header from './components/Header/Header';
 import Course from './components/Course/Course';
 import SideDrawer from './components/Header/DrawerToggle/SideDrawer/SideDrawer';
+import Footer from './components/Footer/Footer';
 
 class App extends Component {
 
@@ -28,7 +29,7 @@ class App extends Component {
         <main>
           <Course />
         </main>
-        <div>Footer</div>
+        <Footer />
       </Aux>
 
     )
