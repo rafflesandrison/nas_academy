@@ -7,7 +7,7 @@ import SideDrawer from './components/Header/DrawerToggle/SideDrawer/SideDrawer';
 class App extends Component {
 
   state = {
-    showSideDrawer: true
+    showSideDrawer: false
   }
 
   openSideDrawerHandler = () => {
